@@ -1,0 +1,222 @@
+.app {
+  min-height: 100vh;
+  padding: 40px 20px;
+  text-align: center;
+  color: #302b3f;
+  background: linear-gradient(
+    120deg,
+    #ffe6f7,
+    #e5f3ff,
+    #eaffdf,
+    #fff1cc,
+    #f2e6ff
+  );
+  background-size: 400% 400%;
+  animation: pastelFlow 14s ease infinite;
+}
+
+@keyframes pastelFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.header {
+  max-width: 800px;
+  margin: 0 auto 35px;
+  padding: 25px;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 12px 35px rgba(80, 60, 120, 0.15);
+}
+
+.header h1 {
+  font-size: 3.2rem;
+  margin-bottom: 10px;
+  background: linear-gradient(
+    90deg,
+    #ff7ad9,
+    #9b8cff,
+    #6ed7ff,
+    #8affb8,
+    #ffe66d,
+    #ff9f7a
+  );
+  background-size: 300%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: rainbowText 6s linear infinite;
+}
+
+@keyframes rainbowText {
+  0% {
+    background-position: 0%;
+  }
+
+  100% {
+    background-position: 300%;
+  }
+}
+
+.header p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 0 auto;
+  max-width: 650px;
+}
+
+.header h3 {
+  margin-top: 20px;
+  font-weight: 700;
+}
+
+.flashcard-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flashcard {
+  width: 440px;
+  min-height: 280px;
+  border-radius: 30px;
+  padding: 32px;
+  margin-bottom: 25px;
+  cursor: pointer;
+  border: 3px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 18px 40px rgba(70, 50, 100, 0.2);
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border 0.35s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.flashcard:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 24px 50px rgba(70, 50, 100, 0.28);
+  border: 3px solid rgba(255, 255, 255, 1);
+}
+
+.flashcard.flipped {
+  transform: rotateY(180deg);
+}
+
+.flashcard.flipped .category,
+.flashcard.flipped h2,
+.flashcard.flipped .card-text,
+.flashcard.flipped .hint {
+  transform: rotateY(180deg);
+}
+
+.easy {
+  background: linear-gradient(135deg, #d9ffe5, #f3fff8, #dff7ff);
+}
+
+.medium {
+  background: linear-gradient(135deg, #fff1c9, #fff8e8, #ffdff3);
+}
+
+.hard {
+  background: linear-gradient(135deg, #ffd8ec, #efe0ff, #ffe7f8);
+}
+
+.category {
+  align-self: center;
+  padding: 7px 16px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.65);
+  font-size: 0.9rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  margin-bottom: 16px;
+  box-shadow: 0 6px 16px rgba(80, 60, 120, 0.12);
+}
+
+.flashcard h2 {
+  margin-bottom: 15px;
+  font-size: 1.9rem;
+}
+
+.card-text {
+  font-size: 1.25rem;
+  line-height: 1.65;
+  margin: 0;
+}
+
+.hint {
+  margin-top: 22px;
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+.next-button {
+  border: none;
+  border-radius: 999px;
+  padding: 15px 32px;
+  font-size: 1rem;
+  font-weight: 800;
+  color: #302b3f;
+  background: linear-gradient(
+    90deg,
+    #ffb3e6,
+    #b8b3ff,
+    #a5e9ff,
+    #caffbf,
+    #fff3a3
+  );
+  background-size: 300%;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(80, 60, 120, 0.18);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+  animation: buttonRainbow 7s linear infinite;
+}
+
+@keyframes buttonRainbow {
+  0% {
+    background-position: 0%;
+  }
+
+  100% {
+    background-position: 300%;
+  }
+}
+
+.next-button:hover {
+  transform: scale(1.07);
+  box-shadow: 0 14px 32px rgba(80, 60, 120, 0.25);
+}
+
+@media (max-width: 540px) {
+  .app {
+    padding: 25px 14px;
+  }
+
+  .header h1 {
+    font-size: 2.3rem;
+  }
+
+  .flashcard {
+    width: 92%;
+    min-height: 260px;
+    padding: 24px;
+  }
+
+  .card-text {
+    font-size: 1.1rem;
+  }
+}
