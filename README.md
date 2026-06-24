@@ -45,13 +45,11 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
-
-I will add this shortly
+[Watch my video walkthrough here]https://www.youtube.com/watch?v=UY6M6doq0DM
 
 ## Notes
 
-Describe any challenges encountered while building the app. I will add to this shortly
+I didn't have too many challenges with this project
 
 ## License
 
